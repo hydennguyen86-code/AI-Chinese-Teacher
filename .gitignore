@@ -1,0 +1,5 @@
+.venv/
+.venv-tts/
+models/
+__pycache__/
+assets/mom_avatar.jpg

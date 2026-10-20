@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cô giáo tiếng Hoa — avatar từ ảnh mẹ</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div>
+        <span class="eyebrow">LUYỆN NÓI TIẾNG PHỔ THÔNG</span>
+        <h1>Trò chuyện cùng cô giáo</h1>
+      </div>
+      <span class="badge">Ảnh tham chiếu của mẹ</span>
+    </header>
+
+    <section class="stage" aria-label="Avatar cô giáo dựng từ ảnh mẹ trên đầu 3D">
+      <div class="avatar-wrap"><canvas id="avatar" aria-label="Khuôn mặt mẹ trên đầu 3D"></canvas></div>
+      <div class="stage-text">
+        <span class="state-dot" id="state-dot"></span><span id="state">Sẵn sàng bắt đầu</span>
+        <p id="teacher-zh" lang="zh-CN">你好！我们一起练习说中文吧。</p>
+        <p id="teacher-pinyin">Nǐ hǎo! Wǒmen yìqǐ liànxí shuō Zhōngwén ba.</p>
+        <p id="teacher-vi">Xin chào! Chúng ta cùng luyện nói tiếng Hoa nhé.</p>
+      </div>
+    </section>
+
+    <section class="practice" aria-label="Luyện hội thoại">
+      <div class="controls">
+        <button id="start" class="primary">Bắt đầu buổi học</button>
+        <button id="mic" class="primary" disabled>🎙 Bấm để nói</button>
+        <button id="stop-speech" disabled>Ngừng cô nói</button>
+      </div>
+      <p class="hint" id="hint">Khi nói xong, bấm lại nút micro hoặc đợi máy nhận khoảng lặng.</p>
+      <p class="preview-warning" id="preview-warning" hidden>Đây là bản xem trước khuôn mặt 3D. Để trò chuyện với cô, <a href="http://127.0.0.1:8765/">mở ứng dụng đang chạy trên máy</a>.</p>
+      <form id="text-form">
+        <label for="text-input">Hoặc gõ câu trả lời để thử</label>
+        <div class="text-row"><input id="text-input" maxlength="500" autocomplete="off" placeholder="Ví dụ: 我昨天去图书馆了。"><button type="submit">Gửi</button></div>
+      </form>
+      <div class="dialogue" id="dialogue" aria-live="polite"></div>
+    </section>
+
+    <footer>
+      <span id="runtime">Đang kiểm tra AI trên máy…</span>
+      <span>Hội thoại chỉ nằm trong trang đang mở. Đóng trang để xóa.</span>
+    </footer>
+  </main>
+  <script src="./avatar.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
